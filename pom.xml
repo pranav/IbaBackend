@@ -15,11 +15,18 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.itsbeenages.ItsBeenAges</mainClass>
+                            <mainClass>com.itsbeenages.ItsBeenAgesApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.hubspot.dropwizard</groupId>
+            <artifactId>dropwizard-guice</artifactId>
+            <version>0.8.4.0</version>
+        </dependency>
+    </dependencies>
 </project>
