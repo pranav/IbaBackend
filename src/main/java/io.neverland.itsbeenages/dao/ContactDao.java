@@ -6,11 +6,12 @@ import org.skife.jdbi.v2.sqlobject.Bind;
 import org.skife.jdbi.v2.sqlobject.GetGeneratedKeys;
 import org.skife.jdbi.v2.sqlobject.SqlQuery;
 import org.skife.jdbi.v2.sqlobject.SqlUpdate;
+import org.skife.jdbi.v2.sqlobject.stringtemplate.UseStringTemplate3StatementLocator;
 import org.skife.jdbi.v2.unstable.BindIn;
 
 import java.util.Set;
 
-
+@UseStringTemplate3StatementLocator
 public interface ContactDao {
   @SqlQuery("SELECT * FROM contact WHERE id = :id")
   Contact findById(@Bind("id") long id);

@@ -78,5 +78,10 @@
             <artifactId>RosettaJdbi</artifactId>
             <version>3.10.7</version>
         </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>stringtemplate</artifactId>
+            <version>3.2</version>
+        </dependency>
     </dependencies>
 </project>
