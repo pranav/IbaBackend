@@ -10,26 +10,20 @@ import io.dropwizard.setup.Environment;
  */
 public class ItsBeenAges extends Application<ItsBeenAgesConfiguration> {
 
-  private GuiceBundle<ItsBeenAgesConfiguration> guiceBundle;
-
   public static void main(String[] args) throws Exception {
     new ItsBeenAges().run(args);
   }
 
   @Override
   public void initialize(Bootstrap<ItsBeenAgesConfiguration> bootstrap) {
-
-    GuiceBundle<ItsBeenAgesConfiguration> guiceBundle = GuiceBundle.<ItsBeenAgesConfiguration>newBuilder()
+    bootstrap.addBundle(GuiceBundle.<ItsBeenAgesConfiguration>newBuilder()
         .addModule(new ItsBeenAgesModule())
         .enableAutoConfig(getClass().getPackage().getName())
         .setConfigClass(ItsBeenAgesConfiguration.class)
-        .build();
-
-    bootstrap.addBundle(guiceBundle);
+        .build());
   }
 
   @Override
   public void run(ItsBeenAgesConfiguration itsBeenAgesConfiguration, Environment environment) throws Exception {
-
   }
 }
