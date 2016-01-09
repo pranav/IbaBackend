@@ -20,6 +20,22 @@ public class User {
     this.phoneNumber = phoneNumber;
   }
 
+  public long getId() {
+    return id;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
   public static Builder newBuilder() {
     return new Builder();
   }
