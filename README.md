@@ -38,11 +38,12 @@ POST https://api.neverland.io/v1/contacts
 
 #### Get User
 ```
-GET     https://api.neverland.io/v1/users/{id}
+GET     https://api.neverland.io/v1/users/{phoneNumber}
 ```
 
+#### Get User's Contacts
 ```
-GET     https://api.neverland.io/v1/users/{phoneNumber}
+GET https://api.neverland.io/v1/users/{id}/contacts
 ```
 
 #### Create User
